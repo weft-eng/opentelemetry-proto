@@ -93,7 +93,7 @@ message Span {
   // is zero-length and thus is also invalid).
   //
   // This field is required.
-  bytes trace_id = 1;
+  bytes tracing_id = 1;
 
   // A unique identifier for a span within a trace, assigned when the span
   // is created. The ID is an 8-byte array. An ID with all zeroes OR of length
@@ -252,7 +252,7 @@ message Span {
   message Link {
     // A unique identifier of a trace that this linked span is part of. The ID is a
     // 16-byte array.
-    bytes trace_id = 1;
+    bytes tracing_id = 1;
 
     // A unique identifier for the linked span. The ID is an 8-byte array.
     bytes span_id = 2;
